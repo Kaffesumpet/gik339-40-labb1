@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/image.css" />
     <script src="script.js" defer></script>
-
 </head>
 
 <body>
@@ -73,6 +72,116 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Men här ska du inte kolla Mikeala! =( )-->
+
+
+
+
+
+    <div class="hidden">
+        <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/EwqhI5xaXSQ?enablejsapi=1"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var playButton = document.getElementById('myButton');
+            var player = document.getElementById('player');
+
+            playButton.addEventListener('click', function () {
+                player.style.display = 'block';
+                player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

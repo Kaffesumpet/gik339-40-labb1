@@ -5,3 +5,7 @@ html {
 html {
     background-color: #143553;
 }
+
+#player {
+    display: none;
+}

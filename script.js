@@ -47,10 +47,11 @@ const lastTargetElement = document.querySelector('.lastTarget');
 
 // Lägger till en eventlistener för "click event" på knappen 
 btnElement.addEventListener("click", function() {
+  
   // Om divElement finns i DOM trädet, ta bort det & byt text på knappen
   if (document.contains(divElement)) {
     divElement.remove();
-    btnElement.textContent = "Nej jävlar, nu blev det fel!";
+    btnElement.textContent = "Men vad är det som låter så vackert?!";
     // Annars lägg tillbaka divElement i DOM trädet & byt tillbaka texten på knappen
   } else {
     lastTargetElement.appendChild(divSavedElement);
@@ -63,3 +64,4 @@ btnElement.addEventListener("click", function() {
 btnElement.addEventListener("click", function() {
     divElement.remove();
 });*/
+
