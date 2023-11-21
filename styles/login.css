@@ -56,6 +56,10 @@
     width: 90%;
 }
 
+.divvar {
+    border: .1rem solid black;
+}
+
 
 label {
     font-size: 1.5rem;
@@ -64,4 +68,10 @@ label {
 .grid-boxy {
     display: grid;
     grid-template-columns: 30% 70%;    
+}
+
+
+.grid-image {
+    display: grid;
+    grid-template-columns: 50% 50%;    
 }

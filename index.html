@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/image.css" />
     <script src="script.js" defer></script>
 
 </head>
@@ -25,6 +26,25 @@
         </div>
 
     </header>
+    <div class="image-box login-section">
+        <div class="lefty">
+            <picture class="image image__img image--rotateleft image--circle">
+                <source type="image/jpg" srcset="
+              .\styles\a.jpg" />
+                <img src=".\styles\a.jpg" alt="Picture of Nicklas that spinns if you hover over it"
+                    style="max-width: 100%;" />
+            </picture>
+        </div>
+        <div class="righty image--rotate">
+            <picture class="image image__img image--rotate image--circle">
+                <source type="image/jpg" srcset="
+              .\styles\b.jpg" />
+                <img src=".\styles\b.jpg" alt="Picture of Thomas that spinns if you hover over it"
+                    style="max-width: 100%;" />
+            </picture>
+        </div>
+
+    </div>
     <section class="login-section">
         <div class="parent-window">
             <div class="window grid">
@@ -47,8 +67,8 @@
                     <button id="myButton" class="button">Remove</button>
                 </div>
 
-                <div class="item">
-                    <div class="item" id="dummyDiv" class="divvar">Hypothetical Div</div>
+                <div class="item lastTarget">
+                    <div id="dummyDiv" class="divvar">Hypothetical Div</div>
                 </div>
             </div>
         </div>
