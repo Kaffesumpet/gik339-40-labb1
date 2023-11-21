@@ -1,0 +1,67 @@
+.page-header__heading {
+    position: relative;
+    z-index: 10;
+    padding: 1em 0;
+    margin-left: .3ch;
+    font-family: var(--fontMono);
+    color: white;
+    font-weight: 900;
+    letter-spacing: .075em;
+    line-height: 100%;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+.page-header__heading h2 {
+    position: relative;
+    z-index: 10;
+    margin-left: .3ch;
+    font-family: var(--fontMono);
+    color: white;
+    font-weight: 900;
+    letter-spacing: .075em;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.page-header__heading span {
+    color: red;
+}  
+
+.parent-window {
+    width: 80rem;
+    height: 30rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    margin-top: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr); 
+}
+
+.item {
+    margin: 0.5rem 1rem 1rem 3rem;
+    width: 90%;
+}
+
+
+label {
+    font-size: 1.5rem;
+}
+
+.grid-boxy {
+    display: grid;
+    grid-template-columns: 30% 70%;    
+}
