@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/image.css" />
+    <link rel="stylesheet" href="./styles/animate" />
     <script src="script.js" defer></script>
 </head>
 
@@ -159,24 +160,37 @@
 
 
 
-<!-- Men här ska du inte kolla Mikeala! =( )-->
+<!-- Men här ska du inte kolla Mikeala! Vi pojkar måste få ha lite hemligheter =( )-->
 
 
 
+<section class="flag-section">
+    <div class="finnish-flag"></div>
+    <div class="finnish-flag"></div>
+    <div class="finnish-flag"></div>
+    <div class="finnish-flag"></div>
+    <div class="finnish-flag"></div>
+    <div class="finnish-flag"></div>
+</section>
 
 
-    <div class="hidden">
-        <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/EwqhI5xaXSQ?enablejsapi=1"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
+
+    <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/EwqhI5xaXSQ?enablejsapi=1"
+    frameborder="0" allowfullscreen></iframe>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var playButton = document.getElementById('myButton');
             var player = document.getElementById('player');
+            var flagSection = document.querySelector('.flag-section');
+            var flagDelay = 3000; // Delay in milliseconds (adjust as needed)
 
             playButton.addEventListener('click', function () {
-                player.style.display = 'block';
                 player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+
+                setTimeout(function () {
+                flagSection.style.display = 'flex'; // Display the flag section after delay          
+                }, flagDelay); // Delay before showing the flag section
             });
         });
     </script>
