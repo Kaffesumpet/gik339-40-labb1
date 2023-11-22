@@ -1,43 +1,31 @@
-.page-header__heading {
-    position: relative;
-    z-index: 10;
-    padding: 1em 0;
+.page-header {
+    padding: 2rem 0;
     margin-left: .3ch;
-    font-family: var(--fontMono);
     color: white;
     font-weight: 900;
     letter-spacing: .075em;
     line-height: 100%;
     text-align: center;
     font-size: 3rem;
-  }
+}
 
-.page-header__heading h2 {
-    position: relative;
-    z-index: 10;
-    margin-left: .3ch;
-    font-family: var(--fontMono);
-    color: white;
-    font-weight: 900;
+.page-header h2 {
     letter-spacing: .075em;
-    text-align: center;
     font-size: 2rem;
 }
 
-.page-header__heading span {
+.page-header span {
     color: red;
-}  
+}
 
 .parent-window {
     width: 80rem;
     height: 30rem;
     background-color: aliceblue;
     border-radius: 1rem;
-    
 }
 
-
-.login-section {
+.flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +37,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat (2, 1fr); 
+    grid-template-columns: repeat (2, 1fr);
 }
 
 .item {
@@ -66,13 +54,13 @@ label {
     font-size: 1.5rem;
 }
 
-.grid-boxy {
+.grid-minor {
     display: grid;
-    grid-template-columns: 30% 70%;    
+    grid-template-columns: 30% 70%;
 }
 
 
 .grid-image {
     display: grid;
-    grid-template-columns: 50% 50%;    
+    grid-template-columns: 50% 50%;
 }

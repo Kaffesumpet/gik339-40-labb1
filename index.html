@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <html>
 
 <head>
@@ -12,53 +11,45 @@
     <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/image.css" />
-    <link rel="stylesheet" href="./styles/animate" />
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="page-header__heading">
-            <h1 class="">
-                M<span>i</span>NT - Grupp 4<span>0</span>
-            </h1>
+        <div class="page-header">
+            <h1 class="">M<span>i</span>NT - Grupp 4<span>0</span></h1>
             <h2>N<span>i</span>cklas & Th<span>o</span>mas</h2>
         </div>
-
     </header>
-    <div class="image-box login-section">
-        <div class="lefty">
-            <picture class="image image__img image--rotateleft image--circle">
-                <source type="image/jpg" srcset=".\styles\a.jpg" />
-                <img src=".\styles\a.jpg" alt="Picture of Nicklas that spinns if you hover over it"
-                    style="max-width: 100%;" />
-            </picture>
-        </div>
-        <div class="righty">
-            <picture class="image image__img image--rotate image--circle">
-                <source type="image/jpg" srcset=".\styles\b.jpg" />
-                <img src=".\styles\b.jpg" alt="Picture of Thomas that spinns if you hover over it"
-                    style="max-width: 100%;" />
-            </picture>
-        </div>
 
-    </div>
-    <section class="login-section">
+    <section class="flexbox">
+        <picture class="image image--left image--rotateleft image--circle">
+            <source type="image/jpg" srcset=".\styles\a.jpg" />
+            <img src=".\styles\a.jpg" alt="Picture of Nicklas, that may or may not spin" style="max-width: 100%" />
+        </picture>
+        <picture class="image image--right image--rotateright image--circle">
+            <source type="image/jpg" srcset=".\styles\b.jpg" />
+            <img src=".\styles\b.jpg" alt="Picture of Thomas, that may or may not spin" style="max-width: 100%" />
+        </picture>
+    </section>
+
+    <section class="flexbox">
         <div class="parent-window">
             <div class="window grid">
-                <div class="item grid-boxy">
+                <div class="item grid-minor">
                     <label for="color">Color:</label>
-                    <input type="text" name="color" id="color" class="textfield">
+                    <input type="text" name="color" id="color" class="textfield" />
                 </div>
 
-                <div class="item grid-boxy">
+                <div class="item grid-minor">
                     <label for="content">Content:</label>
-                    <input type="text" name="content" id="content" class="textfield">
+                    <input type="text" name="content" id="content" class="textfield" />
                 </div>
 
-                <div class="item grid-boxy">
+                <div class="item grid-minor">
                     <label for="divStyle">Checkbox:</label>
-                    <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
+                    <input type="checkbox" name="divStyle" id="divStyle" class="checkbox" />
                 </div>
 
                 <div class="item">
@@ -158,42 +149,51 @@
 
 
 
-<!-- Men här ska du inte kolla Mikeala! Vi pojkar måste få ha lite hemligheter =( )-->
 
 
 
-<section class="flag-section">
-    <div class="finnish-flag"></div>
-    <div class="finnish-flag"></div>
-    <div class="finnish-flag"></div>
-    <div class="finnish-flag"></div>
-    <div class="finnish-flag"></div>
-    <div class="finnish-flag"></div>
-</section>
 
 
 
-    <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/EwqhI5xaXSQ?enablejsapi=1"
-    frameborder="0" allowfullscreen></iframe>
+
+
+
+
+    <!-- Men här ska du inte kolla Mikaela! Vi pojkar måste få ha lite hemligheter =( )-->
+
+    <section class="flag-section">
+        <div class="finnish-flag"></div>
+        <div class="finnish-flag"></div>
+        <div class="finnish-flag"></div>
+        <div class="finnish-flag"></div>
+        <div class="finnish-flag"></div>
+        <div class="finnish-flag"></div>
+    </section>
+
+    <iframe id="player" width="0" height="0" src="https://www.youtube.com/embed/EwqhI5xaXSQ?enablejsapi=1"
+        frameborder="0" allowfullscreen></iframe>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var playButton = document.getElementById('myButton');
-            var player = document.getElementById('player');
-            var flagSection = document.querySelector('.flag-section');
-            var flagDelay = 3000; // Delay in milliseconds (adjust as needed)
+        document.addEventListener("DOMContentLoaded", function () {
+            const playButton = document.getElementById("myButton");
+            const player = document.getElementById("player");
+            const flagSection = document.querySelector(".flag-section");
+            const flagDelay = 3000;
 
-            playButton.addEventListener('click', function () {
-                player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            playButton.addEventListener("click", function () {
+                player.contentWindow.postMessage(
+                    '{"event":"command","func":"playVideo","args":""}',
+                    "*"
+                );
 
                 setTimeout(function () {
-                flagSection.style.display = 'flex'; // Display the flag section after delay          
-                }, flagDelay); // Delay before showing the flag section
+                    flagSection.style.display = "flex";
+                }, flagDelay); //
             });
         });
     </script>
-
-
 </body>
+
+</html>
 
 </html>

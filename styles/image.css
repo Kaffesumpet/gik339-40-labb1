@@ -1,16 +1,8 @@
-:root {
-  --img-padding: 1.5rem;
-}
-
-.image {
-  position: relative;
-}
-
 .image--rotate {
   transform: rotate(0deg);
 }
 
-.image--rotate:hover {
+.image--rotateright:hover {
   transform: rotate(30deg);
 }
 
@@ -18,89 +10,83 @@
   transform: rotate(-30deg);
 }
 
-.image__img,
-.image__picture {
+.image {
+  filter: saturate(0%);
   display: block;
-  object-fit: cover;
-  object-position: center center;
-  transition: all 500ms ease-in-out;
-  /*Egen kod, från brungrå bild till blågrå*/
-  filter: hue-rotate(120deg) saturate(0%);
-  max-width: 100%;
-  max-height: 100%;
+  transition: all 750ms ease-in-out;
+  width: 120px;
+  height: 120px;
 }
 
-.image--color .image__img,
-.image--color .image__picture {
-  position: relative;
-}
 
-.image--color .image__img::after,
-.image--color .image__picture::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background-color: hsl(var(--hue-1), 20%, 40%);
-  mix-blend-mode: color;
-  opacity: .35;
-  content: "";
-}
-
-.image--circle,
-.image--circle .image__img,
-.image--circle .image__picture,
-.image--circle .image__img::after,
-.image--circle .image__picture::after {
-  border-radius: 100vmax;
-}
-
-.image--rotate .image__img:hover,
-.image--rotate .image__picture:hover {
-  transform: rotate(30deg);
-}
-
-/*Gruppens egna tillägg på Alexanders kod*/
 .image--circle>img {
   border-radius: 100vmax;
 }
 
-.image__img {
-  width: 100px;
-  height: 100px;
+.image--right {
+  margin-left: 15rem;
+  margin-bottom: 5rem;
+  margin-top: -7rem;
+  /* This is a hack, but it was faster than fixing it well */
+
 }
 
-.righty {
-  margin-left: 150px;
-  margin-bottom: 50px;
-  margin-top: -70px;
+.image--left {
+  margin-right: 15rem;
+  margin-bottom: 5rem;
+  margin-top: -7rem;
+  /* This is a hack, but it was faster than fixing it well */
 }
 
-.lefty {
-  margin-right: 150px;
-  margin-bottom: 50px;
-  margin-top: -70px;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Norhing to see here! */
 
 .flag-section {
   width: 100%;
-  height: 300px; /* Adjust height as needed */
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
   display: none;
-
 }
 
 .finnish-flag {
-  width: 200px; /* Adjust width as needed */
-  height: 150px; /* Adjust height as needed */
-  background-image: url('https://media.tenor.com/yDZjDH0Rx8oAAAAi/finland-suomi.gif'); /* Replace with your flag image path */
+  width: 20rem;
+  height: 15rem;
+  background-image: url('c.gif');
   background-size: cover;
-  animation: wave 3s infinite linear;
-
 }
