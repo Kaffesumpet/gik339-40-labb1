@@ -33,7 +33,7 @@ textFields.forEach(textField => {
 
 // Denna koden ansvarar för att uppdatera bakgrundsfärgen på divElement när man skriver in en färg i color textfältet samt klickar i checkboxen 
 // Lägger till en eventlistener på checkboxen & uppdaterar bakgrundsfärgen på divElement med matchande färg från color textfältet
-checkboxElement.addEventListener("change", function() {
+checkboxElement.addEventListener("change", () => {
   // Hämta strängen från fältet med namn "color"
   const colorInput = document.querySelector('input[name="color"]');
   const colorValue = colorInput.value;
@@ -49,7 +49,7 @@ const lastTargetElement = document.querySelector('.lastTarget');
 
 // Denna koden ansvarar för att ta bort divElement från DOM trädet (& lägga tillbaka det igen, för att vi är busiga, tihi)
 // Lägger till en eventlistener för "click event" på knappen 
-btnElement.addEventListener("click", function() {
+btnElement.addEventListener("click", () => {
   
   // Om divElement finns i DOM trädet, ta bort det & byt text på knappen
   if (document.contains(divElement)) {
