@@ -25,25 +25,11 @@
     border-radius: 1rem;
 }
 
-.flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .window {
     margin-top: 5rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat (2, 1fr);
-}
-
-.item {
-    margin: 0.5rem 1rem 1rem 3rem;
-    width: 90%;
-}
 
 .divvar {
     border: .1rem solid black;
@@ -52,15 +38,4 @@
 
 label {
     font-size: 1.5rem;
-}
-
-.grid-minor {
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
-
-
-.grid-image {
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
