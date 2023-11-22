@@ -12,14 +12,15 @@ const divElement = document.getElementsByClassName("divvar")[0];
 console.log(divElement);
 
 
+// Denna koden ansvarar för att hantera inputevents på textfälten & uppdatera divElement med texten från textfältet "content"
 // Denna funktion tar stringen från "content" textfältet & skriver ut texten i divElement
 function handleInput(e) {
-  // Skriver ut vilket element som triggar eventet i konsollen
+  // Skriver ut vilket element som triggar eventet i konsollen (e.target är elementet som triggat)
   console.log("Event triggered by: ", e.target);
   // Hämtar namnet på elementet som triggar eventet och sparar i en variabel
   const fieldName = e.target.name;
 
-  // Om elementet är strictly equal med "content", uppdatera divElement med texten från textfältet
+  // Om elementet är strictly equal med "content", uppdatera divElement med texten(value) från textfältet
   if (fieldName === "content") {
     divElement.innerHTML = e.target.value;
   }
@@ -30,6 +31,7 @@ textFields.forEach(textField => {
   textField.addEventListener("input", handleInput);
 });
 
+// Denna koden ansvarar för att uppdatera bakgrundsfärgen på divElement när man skriver in en färg i color textfältet samt klickar i checkboxen 
 // Lägger till en eventlistener på checkboxen & uppdaterar bakgrundsfärgen på divElement med matchande färg från color textfältet
 checkboxElement.addEventListener("change", function() {
   // Hämta strängen från fältet med namn "color"
@@ -45,6 +47,7 @@ const lastImage = document.querySelector('.image-box');
 
 const lastTargetElement = document.querySelector('.lastTarget');
 
+// Denna koden ansvarar för att ta bort divElement från DOM trädet (& lägga tillbaka det igen, för att vi är busiga, tihi)
 // Lägger till en eventlistener för "click event" på knappen 
 btnElement.addEventListener("click", function() {
   
