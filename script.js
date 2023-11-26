@@ -1,14 +1,20 @@
 // Sparar elementen i variabler så att de kan användas senare & skriver ut dem i konsollen var för sig
+// Samtliga hämtas med hjälp av CSS selektorer & returneras som en NodeList (querySelectorAll) eller ett element (querySelector)
+
+// Hämtar det första <input> elementet av typen "checkbox"
 const checkboxElement = document.querySelector('input[type="checkbox"]');
 console.log(checkboxElement);
 
+// Hämtar alla element med klassen "textfield"
 const textFields = document.querySelectorAll(".textfield");
 console.log(textFields);
 
-const btnElement = document.getElementById("myButton");
+// Hämtar det första elementet med id "myButton"
+const btnElement = document.querySelector("#myButton");
 console.log(btnElement);
 
-const divElement = document.getElementsByClassName("divvar")[0];
+// Hämtar det första div-elementet med klassen "divven"
+const divElement = document.querySelector("div.divven");
 console.log(divElement);
 
 
